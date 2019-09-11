@@ -5,6 +5,9 @@ import LoginComponent from '../containers/Registration/Login/Login';
 import RegisterComponent from '../containers/Registration/Register/Register';
 import ForgotComponent from '../containers/Registration/Forgot/Forgot';
 import SocialComponent from '../containers/Registration/Social/Social';
+import NewNotifyComponent from '../containers/Home/Notifications/New/NewNotify';
+import NotificationsComponent from '../containers/Home/Notifications/Notifications';
+import NotifyDelComponent from '../containers/Home/Notifications/Deleted/NotifyDel';
 
 
 
@@ -18,6 +21,7 @@ export default class AppRouter {
              <Router>
                  <Authentication />
                  <Dashboard />
+                 <Discussion />
              </Router>
         );
     }
@@ -39,9 +43,9 @@ function Dashboard () {
     return(
         <div>
             <Route path="/dashboard" exact component={Dashboard} /> 
-            <Route path="/NewNotify" exact component={} /> 
-            <Route path="/Notifications" exact component={} /> 
-            <Route path="/Notifications/Deleted" exact component={} /> 
+            <Route path="/NewNotify" exact component={NewNotifyComponent} /> 
+            <Route path="/Notifications" exact component={NotificationsComponent} /> 
+            <Route path="/Notifications/Deleted" exact component={NotifyDelComponent} /> 
         </div>
     )
 }
